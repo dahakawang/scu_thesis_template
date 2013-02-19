@@ -1,0 +1,151 @@
+
+%setup basic doc info
+\newcommand{\varTitle}{}
+\renewcommand{\title}[1]{\renewcommand{\varTitle}{#1}}
+\newcommand{\varTitleEng}{}
+\newcommand{\titleEng}[1]{\renewcommand{\varTitleEng}{#1}}
+
+\newcommand{\varAuthor}{}
+\renewcommand{\author}[1]{\renewcommand{\varAuthor}{#1}}
+\newcommand{\varAuthorEng}{}
+\newcommand{\authorEng}[1]{\renewcommand{\varAuthorEng}{#1}}
+
+\newcommand{\varDate}{}
+\renewcommand{\date}[1]{\renewcommand{\varDate}{#1}}
+
+\newcommand{\varAdviser}{}
+\newcommand{\adviser}[1]{\renewcommand{\varAdviser}{#1}}
+\newcommand{\varAdviserEng}{}
+\newcommand{\adviserEng}[1]{\renewcommand{\varAdviserEng}{#1}}
+
+\newcommand{\varCollege}{}
+\newcommand{\college}[1]{\renewcommand{\varCollege}{#1}}
+\newcommand{\varCollegeEng}{}
+\newcommand{\collegeEng}[1]{\renewcommand{\varCollegeEng}{#1}}
+
+\newcommand{\varMajor}{}
+\newcommand{\major}[1]{\renewcommand{\varMajor}{#1}}
+\newcommand{\varMajorEng}{}
+\newcommand{\majorEng}[1]{\renewcommand{\varMajorEng}{#1}}
+
+\newcommand{\varID}{}
+\newcommand{\id}[1]{\renewcommand{\varID}{#1}}
+
+\newcommand{\varGrade}{}
+\newcommand{\grade}[1]{\renewcommand{\varGrade}{#1}}
+
+
+
+% setting up the abstract
+\newcommand{\varKeyword}{}
+\newcommand{\keyword}[1]{\renewcommand{\varKeyword}{#1}}
+\renewenvironment{abstract}[1]{
+\addtolength{\leftskip}{1.1cm}
+\addtolength{\rightskip}{1.1cm}
+\thispagestyle{empty}
+\addtocounter{page}{-1}
+\vspace*{1cm}
+\centerline{\heiti \zihao{-2} \textbf{\varTitle}}
+\vspace{1cm}
+\centerline{\kaishu \zihao{4} \varCollege}
+\vspace{1cm}
+\centerline{\kaishu \zihao{4} 学生:\varAuthor \hspace{1cm} 指导教师:\varAdviser}
+\vspace{1.2cm}
+\kaishu \zihao{5}
+\textbf{[摘要]} \keyword{#1} }
+{\par \textbf{[主题词]} \varKeyword \clearpage}
+\newenvironment{abstractEng}[1]{
+\addtolength{\leftskip}{1.1cm}
+\addtolength{\rightskip}{1.1cm}
+\thispagestyle{empty}
+\addtocounter{page}{-1}
+\vspace*{1cm}
+\centerline{\heiti \zihao{-2} \textbf{\varTitleEng}}
+\vspace{1cm}
+\centerline{\kaishu \zihao{4} \varCollegeEng}
+\vspace{1cm}
+\centerline{\kaishu \zihao{4} Student:\varAuthorEng \hspace{1cm} Adviser:\varAdviserEng}
+\vspace{1.2cm}
+\kaishu \zihao{5} 
+\textbf{[Abstract]} \keyword{#1} }
+{\par \textbf{[Key Words]} \varKeyword \clearpage}
+
+
+%setup the cover
+\usepackage{array}
+\newcommand{\makecover}{
+\thispagestyle{empty}
+\addtocounter{page}{-1}
+\vspace*{0cm}
+\centerline{\includegraphics[height=1.6cm]{./images/scu}}
+\vspace*{1.2cm}
+\centerline{\songti \zihao{1} \textbf{本科生毕业论文(设计)} } \par %skip bold,it's a hack and i dont know why
+\vspace*{1cm}
+\centerline{\includegraphics[height=3.5cm]{./images/logo}}
+\vspace*{0.5cm}
+\centerline{
+\begin{tabular}{ b{2cm} >{\centering\arraybackslash}b{8cm}}
+\songti \zihao{4} 题\hspace{1cm}目 & \textbf{\kaishu \zihao{4} \varTitle} \\[-3pt]
+\cline{2-2} \\[0.6cm]
+\songti \zihao{4} 学\hspace{1cm}院 & \textbf{\kaishu \zihao{4} \varCollege} \\[-3pt]
+\cline{2-2} \\[0.6cm]
+\songti \zihao{4} 专\hspace{1cm}业 & \textbf{\kaishu \zihao{4} \varMajor} \\[-3pt]
+\cline{2-2} \\[0.6cm]
+\songti \zihao{4} 学生姓名 & \textbf{\kaishu \zihao{4} \varAuthor} \\[-3pt]
+\cline{2-2} \\[0.6cm]
+\end{tabular}
+}
+\centerline{
+\begin{tabular}{p{2cm} >{\centering\arraybackslash}p{3cm} p{1cm} >{\centering\arraybackslash}p{3cm}}
+\songti \zihao{4} 学\hspace{1cm}号 & \textbf{\kaishu \zihao{4} \varID} & 
+\songti \zihao{4} 年级 & \textbf{\kaishu \zihao{4} \varGrade} \\[-3pt]
+\cline{2-2} \cline{4-4} \\[0.6cm]
+\end{tabular}
+}
+\centerline{
+\begin{tabular}{ b{2cm} >{\centering\arraybackslash}b{8cm}}
+\songti \zihao{4} 指导教师 & \textbf{\kaishu \zihao{4} \varAdviser} \\[-3pt]
+\cline{2-2}
+\end{tabular}
+}
+\vfill
+\centerline{\songti \zihao{3} 教务处制表}
+\centerline{\songti \zihao{3}\varDate}
+\clearpage
+}
+
+
+%setup the page layout and page margin
+\usepackage{geometry}
+\geometry{
+  top=2.5cm,            % <-- you want to adjust this
+  inner=2.5cm,
+  outer=2cm,
+  bottom=2.5cm,
+  headheight=0.5cm,       % <-- and this
+  headsep=0.5cm,          % <-- and this
+}
+
+%line spacing setttings
+\usepackage{setspace}
+\linespread{1.4} %经验值
+
+%setting header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\textcolor[gray]{0.5}{四川大学本科毕业生论文}}
+\rhead{\textcolor[gray]{0.5}{\varTitle}}
+
+%miscellaneous and debug
+\CTEXoptions[today=big]
+%\usepackage{layout}        
+%\geometry{showframe=true}
+
+
+%setup section counter
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+%setup font
+\usepackage{fontspec}
+\setmainfont{Times New Roman}

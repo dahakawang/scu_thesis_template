@@ -1,0 +1,26 @@
+\chapter{如何使用}
+\section{使用环境}
+本模板需要依赖于\LaTeXe 、Xe\TeX 以及C\TeX ，因此在你使用前请确保这些发行版已经安装妥当。本文件全部使用UTF-8编码，并使用Xe\LaTeX 编译，以支持国际化和TrueType技术字体。
+
+\section{文件结构}
+本模板由以下文件构成：
+\begin{itemize}
+\item main.tex - \LaTeX 基本框架，你可以在此添加你需要的Package
+\item adjust.tex - 定义川大毕设论文格式,你不需要了解这个文件（除非本模板板式不合符你的需求）
+\item basic\_info.tex - 定义论文作者基本信息
+\item prologue.tex - 包含了封面、中英文摘要以及目录的定义
+\item epilogue.tex - 包含了论文参考文献、附录等信息
+\item ch??.tex - 这是论文每一章具体内容
+\item make.bat - 运行在Windows上的脚本，他可以免去你敲代码编译的麻烦 \textasciicircum \_ \textasciicircum
+\end{itemize}
+
+\section{如何使用}
+首先说明一下，本教程是一篇self-contained的文章，本文章是直接编译本\LaTeX 模板得到，你可以具体参考模板源代码内容以学习如何使用。但是为了阐明脉络， 下面我将以一次完整使用的形式展示如何使用本模板。
+
+首先，你需要填写自己的基本信息，例如姓名、学号之类，你需要打开basic\_info.tex文件将其填写进去。然后你需要书写你的摘要，在prologue.tex里面是中英文摘要的定义处，你可以在其中编写摘要。假设你是\LaTeX 的老用户，你可能需要自己包含一些Package，那么你可以在main.tex中添加usepackage命令。另外，随着章节数目增多，你可以自行新建chxx.tex文件，并将其在main.tex中用include指令包含进来。最后，为了编译你的论文，你需要使用xelatex命令。不过目前Windows用户可以直接双击make.bat生成论文。
+
+\section{问题}
+\begin{enumerate}
+\item 中英文摘要分别不能超过一页，否则第二页的板式会有问题（由于本人精力有限，且该问题出现几率较小，目前暂未打算修复这个问题）。
+\item 所有文件必须是UTF-8编码，否则编译不能通过。
+\end{enumerate}
