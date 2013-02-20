@@ -16,8 +16,10 @@
 
 \section{如何使用}
 首先说明一下，本教程是一篇self-contained的文章，本文章是直接编译本\LaTeX 模板得到，你可以具体参考模板源代码内容以学习如何使用。但是为了阐明脉络， 下面我将以一次完整使用的形式展示如何使用本模板。
-
-首先，你需要填写自己的基本信息，例如姓名、学号之类，你需要打开basic\_info.tex文件将其填写进去。然后你需要书写你的摘要，在prologue.tex里面是中英文摘要的定义处，你可以在其中编写摘要。假设你是\LaTeX 的老用户，你可能需要自己包含一些Package，那么你可以在main.tex中添加usepackage命令。另外，随着章节数目增多，你可以自行新建chxx.tex文件，并将其在main.tex中用include指令包含进来。最后，为了编译你的论文，你需要使用xelatex命令。不过目前Windows用户可以直接双击make.bat生成论文。
+\subsection{一个三级标题}
+首先，你需要填写自己的基本信息，例如姓名、学号之类，你需要打开basic\_info.tex文件将其填写进去。然后你需要书写你的摘要，在prologue.tex里面是中英文摘要的定义处，你可以在其中编写摘要。假设你是\LaTeX 的老用户，你可能需要自己包含一些Package，那么你可以在main.tex中添加usepackage命令。
+\subsubsection{四级标题}
+另外，随着章节数目增多，你可以自行新建chxx.tex文件，并将其在main.tex中用include指令包含进来。最后，为了编译你的论文，你需要使用xelatex命令。不过目前Windows用户可以直接双击make.bat生成论文。
 
 \section{问题}
 \begin{enumerate}

@@ -133,8 +133,8 @@
 %setting header and footer
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{\textcolor[gray]{0.5}{四川大学本科毕业生论文}}
-\rhead{\textcolor[gray]{0.5}{\varTitle}}
+\lhead{\textcolor[gray]{0.5}{\zihao{5} 四川大学本科毕业生论文}}
+\rhead{\textcolor[gray]{0.5}{\zihao{5} \varTitle}}
 
 %miscellaneous and debug
 \CTEXoptions[today=big]
@@ -142,9 +142,36 @@
 %\geometry{showframe=true}
 
 
-%setup section counter
+%setupcounter
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
+%setup chapter format
+\CTEXsetup[beforeskip={-15pt}]{chapter}
+\CTEXsetup[afterskip={10pt}]{chapter}
+\CTEXsetup[name={,}]{chapter}
+\CTEXsetup[number={\arabic{chapter}}]{chapter}
+\CTEXsetup[nameformat={\zihao{3} \bfseries \heiti}]{chapter}
+\CTEXsetup[titleformat={\zihao{3} \bfseries \heiti}]{chapter}
+%setup section format
+\CTEXsetup[beforeskip={10pt}]{section}
+\CTEXsetup[afterskip={10pt}]{section}
+\CTEXsetup[format={\raggedright}]{section}
+\CTEXsetup[nameformat={\zihao{-3}  \heiti}]{section}
+\CTEXsetup[titleformat={\zihao{-3} \heiti}]{section}
+%setup subsection format
+\CTEXsetup[beforeskip={0pt}]{subsection}
+\CTEXsetup[afterskip={1pt}]{subsection}
+\CTEXsetup[format={\raggedright}]{subsection}
+\CTEXsetup[nameformat={\zihao{4}  \heiti}]{subsection}
+\CTEXsetup[titleformat={\zihao{4} \heiti}]{subsection}
+%setup subsubsection format
+\CTEXsetup[beforeskip={0pt}]{subsubsection}
+\CTEXsetup[afterskip={1pt}]{subsubsection}
+\CTEXsetup[format={\raggedright}]{subsubsection}
+\CTEXsetup[nameformat={\zihao{-4}  \heiti}]{subsubsection}
+\CTEXsetup[titleformat={\zihao{-4} \heiti}]{subsubsection}
+% let the chapter pages display headers
+\fancypagestyle{plain}{} 
 
 %setup font
 \usepackage{fontspec}
