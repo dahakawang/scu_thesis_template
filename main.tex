@@ -1,17 +1,26 @@
+% !Mode:: "TeX:UTF-8"
+
 \documentclass[a4paper]{ctexrep}
+\usepackage{scuthesis}
 
-
-\include{adjust}
-\include{basic_info}
-
+\include{src/basic_info} % 作者信息
 
 \begin{document}
 \zihao{-4}
 
+% 前言（摘要）
+\include{src/prologue} 
 
+% 正文，其他章请按类似方式添加
+\include{src/ch01}     
+\include{src/ch02}
 
-\include{prologue}
-\include{ch01}
-\include{ch02}
-\include{epilogue}
+% 后记、致谢
+\include{src/epilogue}
+
+% 参考文献
+\cleardoublepage
+\bibliographystyle{bstutf8}
+\bibliography{ref/refs}
+
 \end{document}

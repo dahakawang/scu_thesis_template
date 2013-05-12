@@ -30,3 +30,5 @@
 *.vrb
 *.xdy
 *.tdo
+ref/auto/refs.el
+clean.bat
