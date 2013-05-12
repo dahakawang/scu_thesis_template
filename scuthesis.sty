@@ -1,5 +1,5 @@
+% setup basic doc info
 
-%setup basic doc info
 \newcommand{\varTitle}{}
 \renewcommand{\title}[1]{\renewcommand{\varTitle}{#1}}
 \newcommand{\varTitleEng}{}
@@ -33,8 +33,6 @@
 
 \newcommand{\varGrade}{}
 \newcommand{\grade}[1]{\renewcommand{\varGrade}{#1}}
-
-
 
 % setting up the abstract
 \newcommand{\varKeyword}{}
@@ -70,6 +68,9 @@
 \textbf{[Abstract]} \keyword{#1} }
 {\par \textbf{[Key Words]} \varKeyword \clearpage}
 
+\usepackage{xcolor}
+\usepackage[CJKbookmarks=true,pdfborder=0 0 1]{hyperref}
+\usepackage{wasysym}
 
 %setup the cover
 \usepackage{array}
@@ -176,3 +177,4 @@
 %setup font
 \usepackage{fontspec}
 \setmainfont{Times New Roman}
+
