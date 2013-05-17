@@ -5,13 +5,18 @@
 \section{文件结构}
 本模板由以下文件构成：
 \begin{itemize}
-\item main.tex - \LaTeX 基本框架，你可以在此添加你需要的Package
-\item adjust.tex - 定义川大毕设论文格式,你不需要了解这个文件（除非本模板板式不合符你的需求）
-\item basic\_info.tex - 定义论文作者基本信息
-\item prologue.tex - 包含了封面、中英文摘要以及目录的定义
-\item epilogue.tex - 包含了论文参考文献、附录等信息
-\item ch??.tex - 这是论文每一章具体内容
-\item make.bat - 运行在Windows上的脚本，他可以免去你敲代码编译的麻烦 \textasciicircum \_ \textasciicircum
+\item \textcolor{blue}{main.tex} - \LaTeX 基本框架，你可以在此添加你需要的
+  Package
+\item \textcolor{blue}{make.bat} - 运行在Windows上的编译脚本，双击即可执行，他可以免去你敲代码编译
+  的麻烦 \smiley
+\item \textcolor{blue}{Makefile} - 运行在Linux上的编译脚本，使用 \verb|make| 命令完成
+  编译
+\item \textcolor{blue}{scuthesis.sty} - 川大毕设论文格式样式包，你不需要了解这个文件（除非本模板板式不合符你的需求）
+\item \textcolor{blue}{src/basic\_info.tex} - 定义论文作者基本信息
+\item \textcolor{blue}{src/prologue.tex} - 包含了封面、中英文摘要以及目录的定义
+\item \textcolor{blue}{src/epilogue.tex} - 包含了论文参考文献、附录等信息
+\item \textcolor{blue}{src/ch*.tex} - 论文每一章具体内容
+\item \textcolor{blue}{ref/refs.bib} - bibtex文献库，推荐使用 \href{http://jabref.sourceforge.net/}{JabRef} 维护
 \end{itemize}
 
 \section{如何使用}
